@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voting Aslab</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/apexcharts/dist/apexcharts.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.0.8/css/dataTables.bootstrap5.css" />
+    <link rel="stylesheet" href="assets/fontawesome/css/all.css">
+    <style>
+      * {
+        font-family: "Inconsolata", monospace;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg border border-bottom">
+      <div class="container-fluid">
+        <a class="navbar-brand text-dark text-opacity-75" href="#">E-Voting Aslab Informatika</a>
+      </div>
+    </nav>
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog modal-dialog-centered">
+        <div class="modal-content rounded-0 border">
+          <div class="modal-body p-4 pb-3">
+            <form>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Nama</label>
+                <input type="email" class="form-control rounded-0" id="exampleInputEmail1" aria-describedby="emailHelp">
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">NIM</label>
+                <input type="password" class="form-control rounded-0" id="exampleInputPassword1">
+              </div>
+              <div class="mb-3">
+                <label for="formFile" class="form-label">Gambar</label>
+                <input class="form-control rounded-0" type="file" id="formFile">
+              </div>
+              <div class="mt-4">
+                <div class="row">
+                  <div class="col-md-9">
+                    <button type="submit" class="btn btn-outline-light border text-dark rounded-0 w-100 mb-2">
+                      <span class="text-primary">Input</span>
+                    </button>
+                  </div>
+                  <div class="col-md-3">
+                    <button type="submit" class="btn btn-outline-light border text-dark rounded-0 w-100 mb-2" data-bs-dismiss="modal" aria-label="Close">
+                      <span class="text-secondary">Batal</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mt-4 p-3">
+      <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+          <div class=" mb-3">
+            <h3 class="fw-light mb-3">Detail Calon Ketua Umum</h3>
+            <a href="index.html" class="btn btn-outline-light border text-dark rounded-0">
+              <i class="fa-solid fa-angles-left me-2 text-primary"></i>Kembali </a>
+          </div>
+        </div>
+        <div class="col-md-1"></div>
+      </div>
+      <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+          <div class="border p-3">
+            <div>
+              <table id="myTable" class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th scope="col" class="w-25 text-center" style="max-width:2%;">No</th>
+                    <th scope="col" class="w-25 text-center" style="max-width:10%;">Foto</th>
+                    <th scope="col" class="w-25 text-center" style="max-width:10%;">Divisi</th>
+                    <th scope="col" class="text-center">Nama</th>
+                    <th scope="col" class="w-25 text-center" style="max-width:7%;">Aksi</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th class="text-center align-middle">1</th>
+                    <td class="text-center p-0 m-0 pt-3">
+                      <img src="" alt="" height="150px">
+                    </td>
+                    <td class="text-center align-middle">
+                      <span class="text-bg-primary p-1 px-3 rounded-5">Pemrograman</span>
+                    </td>
+                    <td class="text-center align-middle">Zendhi Yuna Burnama</td>
+                    <td class="text-center align-middle">
+                      <a href="" class="btn btn-outline-light border text-dark rounded-0" onclick="return confirm('Apakah anda yakin ingin menghapus data ini?')">
+                        <i class="fa-solid fa-trash me-2 text-danger"></i>Hapus </a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="p-2 border-bottom border-start border-end">
+            <p class="m-0 text-center" style="font-size:13px;">Copyright Aslab Informatika Umsida <span class="fs-5">&#169;</span>2024. All rights reserved. </p>
+          </div>
+        </div>
+        <div class="col-md-1"></div>
+      </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog modal-dialog-centered">
+        <div class="modal-content rounded-0 border">
+          <div class="modal-body p-4 pb-2 pb-3">
+            <div class="border border-3 mb-3 bg-dark border-primary">
+              <h4 class="text-center m-0 m-5 mb-4 text-white" id="element3"></h4>
+            </div>
+            <div class="row">
+              <div class="col-md-6 mb-2">
+                <a href="#" class="btn btn-outline-light border rounded-0 w-100">
+                  <i class="fa-solid fa-caret-right me-2"></i>
+                  <span class="text-danger">Logout</span>
+                </a>
+              </div>
+              <div class="col-md-6 mb-2">
+                <a href="#" class="btn btn-outline-light border rounded-0 w-100" data-bs-dismiss="modal">
+                  <i class="fa-solid fa-caret-right me-2"></i>
+                  <span class="text-dark">Batal</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <!-- DataTables JS -->
+    <script src="https://cdn.datatables.net/2.0.8/js/dataTables.js"></script>
+    <script src="https://cdn.datatables.net/2.0.8/js/dataTables.bootstrap5.js"></script>
+    <script>
+      $(document).ready(function() {
+        $('#myTable').DataTable({});
+      });
+    </script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+      var typed03 = new Typed('#element3', {
+        strings: ['Ingin Melanjutkan Logout?'],
+        typeSpeed: 60,
+        backSpeed: 0,
+        fadeOut: true,
+        loop: false
+      });
+    </script>
+  </body>
+</html>
