@@ -1,1 +1,1 @@
-https://zendhiyb.github.io/Voting-Aslabinf-Frontend/
+https://zendhiyb.github.io/voting-aslabinf-frontend/
